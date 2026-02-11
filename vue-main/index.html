@@ -12,36 +12,7 @@
 </head>
 <body>
     <div id="app">
-        <div class="product">
-            <div class="product-image">
-                <img v-bind:alt="altText" :src="image" />
-            </div>
-            <div class="product-info">
-                <h1>{{ title }}</h1>
-                <p>{{ description}}</p>
-                <a :href="Link">More products like this</a>
-                 <p v-if="inventory > 10 && inStock > 0">In stock</p>
-                <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
-                <p v-else :class="{'out-of-stock': !inStock }">Out of stock</p>
-                <p>{{sale}}</p>
-                <ul>
-                    <li v-for="detail in details">{{ detail }}</li>
-                </ul>
-                <div class="color-box" v-for="(variant, index) in variants" :key="variant.variantId"
-                    :style="{ backgroundColor:variant.variantColor }" @mouseover="updateProduct(index)">
-                </div>
-                <ul>
-                    <li v-for="size in sizes">{{ size }}</li>
-                </ul>
-                <div class="buttons">
-                    <button v-on:click="addToCart">Add to cart</button>
-                    <button v-on:click="deleteFromCart">Delete from cart</button>
-                </div>
-                <div class="cart">
-                    <p>Cart({{ cart }})</p>
-                </div>
-            </div>
-        </div>
+        <product :premium="premium"></product>
     </div>
 </body>
 </html>
