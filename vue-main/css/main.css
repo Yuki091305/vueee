@@ -97,3 +97,7 @@ textarea {
     display: flex;
     gap: 15px;
 }
+
+.out-of-stock {
+    text-decoration: line-through;
+}
