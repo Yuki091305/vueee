@@ -54,6 +54,7 @@ button {
     height: 40px;
     width: 100px;
     font-size: 14px;
+    text-align: center;
 }
 
 .disabledButton {
@@ -90,4 +91,9 @@ textarea {
 
 .line{
     text-decoration: line-through;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
 }
